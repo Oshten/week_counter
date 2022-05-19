@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Счетчик недель</title>
+</head>
+<body>
+    <h3>Счетчик недель!</h3>
+    <form method="post" >
+      {% csrf_token %}
+        {% for form in data_form %}
+        <div>{{ form.help_text }}</div>
+        <div>{{ form }}</div>
+        <div>{{ form.errors }}</div>
+        {% endfor %}
+      <button type="submit">Определить</button>
+    </form>
+    {% if week_number %}
+        <div>
+            Выбранная дата {{ date }} в <b>{{ week_number }}</b> неделе от {{ start_date }}<br>
+            (первый день недели - {{ first_day }})
+        </div>
+    {% endif %}
+</body>
+</html>

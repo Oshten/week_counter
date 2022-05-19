@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Счетчик недель</title>
+</head>
+<body>
+    <h3>Счетчик недель!</h3>
+    <div>
+        Выбранная дата {{ date }} в <b>{{ week_number }}</b> неделе от {{ start_date }}<br>
+        (первый день недели - {{ first_day }})
+    </div>
+    <a href="{% url 'date_entry_page' %}">Назад</a>
+</body>
+</html>
