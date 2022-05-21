@@ -124,9 +124,9 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Начальная дата отсчета
-START_DATA = date(year=2019, month=1, day=1)
+START_DATE = date(day=1, month=1, year=2019)
 
 # Первый день недели (число от 0 до 6)
-FIRST_DAY_WEEK = 0   # воскресенье
+FIRST_DAY_WEEK = 6   # воскресенье
 
 
